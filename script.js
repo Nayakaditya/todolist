@@ -1,4 +1,4 @@
-// window.alert("Make sure you have proper internet connection");
+window.alert("Make sure you have proper internet connection");
 // List container to append their list children
 const listContainer = document.querySelector(".list-container");
 // Extract form from html so that we can submit that form so,
