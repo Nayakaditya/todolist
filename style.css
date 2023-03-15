@@ -1,0 +1,179 @@
+:root {
+  --primary-c: #d75100;
+  --secondary-c: #c74a00;
+  --ternary-c: #bb4600;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.taskCount {
+  text-align: center;
+  color: #cacaca;
+  font-family: sans-serif;
+}
+
+#totalTask {
+  color: white;
+}
+
+/* +++++++++++++++ FORM CONTAINER STARTS +++++++++++++++ */
+.list-form-container {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  background-color: var(--ternary-c);
+  padding: 2rem;
+  border-radius: 14% 86% 54% 46% / 22% 64% 36% 78%;
+  box-shadow: 2px 2px 5px 1px rgba(255, 208, 167, 0.56), 0px 0px 5px 0px red;
+}
+
+.list-form-container::before {
+  content: "\f0c6";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: relative;
+  top: 127px;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+h3 {
+  text-align: center;
+  margin: 0 0 30px 0;
+  font-size: 2.5em;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Splash", cursive;
+  color: white;
+}
+
+.create_list_form input[type="text"] {
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding-left: 40px;
+  font-size: 1.4em;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.input_and_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: all 120ms linear;
+}
+
+.input_and_btn:hover {
+  transform: scale(1.1);
+}
+
+.input_and_btn:hover {
+  color: green;
+}
+/* +++++++++++++++ FORM CONTAINER ENDS +++++++++++++++ */
+/* +++++++++++++++ LIST CONTAINER STARTS +++++++++++++++ */
+input[type="checkbox"]:checked {
+  animation: df 1s infinite;
+}
+
+@keyframes df {
+  0% {
+    transform: rotate(0deg);
+    outline: 1px solid rgb(0, 255, 115);
+  }
+  50% {
+    transform: rotate(30deg);
+    outline: 4px solid rgb(255, 255, 0);
+  }
+  100% {
+    transform: rotate(0deg);
+    outline: 1px solid rgb(0, 255, 115);
+  }
+}
+.list-container {
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  width: 400px;
+  height: auto;
+}
+
+.list-item li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin-left: -30px;
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+}
+
+.list-item li input[type="text"] {
+  width: 80%;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2em;
+}
+
+.list-item li .delete-btn {
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: all 120ms linear;
+}
+
+.list-item li .delete-btn:hover {
+  transform: scale(1.1);
+  color: red;
+}
+/* +++++++++++++++ LIST CONTAINER ENDS +++++++++++++++ */
+
+.completed {
+  text-decoration: line-through;
+  color: var(--secondary-c);
+}
+
+.bg-red {
+  color: red;
+}
+
+/* +++++++++ MEDIA QUERIES +++++++++++ */
+
+@media (max-width: 1100px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .list-form-container {
+    position: initial;
+    height: 200px;
+  }
+
+  .list-container {
+    position: initial;
+  }
+}

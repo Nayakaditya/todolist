@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List app</title>
+    <!-- LINK GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Splash&family=Ubuntu:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ANIMATION ON SCROLL LINK -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- LINKING CSS FILE -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- TODO CONTAINER -->
+    <div class="container">
+      <!-- FORM CONTAINER -->
+      <div class="list-form-container">
+        <h3>TO DO</h3>
+        <form class="create_list_form">
+          <input
+            type="text"
+            placeholder="Add Your List"
+            required
+            class="inputField"
+          />
+          <button class="input_and_btn" onclick="createList(this)">
+            <i class="fa-solid fa-circle-plus"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- TASK CONTAINER -->
+      <div>
+        <ul class="list-container">
+          <!-- ALL LIST ITEMS WILL BE ADDED HERE DYNAMICALLY AND SAVE IT TO THE BROWSER'S LOCAL STORAGE -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="taskCount">
+      <p>Total tasks : <strong id="totalTask"></strong></p>
+    </div>
+    <!-- USING SCRIPT FILE FOR ANIMATION ON SCROLL -->
+    <script
+      src="https://kit.fontawesome.com/4bfb5306a3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- LINKING JS FILE -->
+    <script src="script.js"></script>
+  </body>
+</html>
